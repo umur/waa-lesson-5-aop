@@ -16,6 +16,8 @@ public class ProductController {
     @LogMe
     @GetMapping
     public List<Product> getAll() {
+
+
        // System.out.println("method name : getAll");
         System.out.println("method");
         return null;
