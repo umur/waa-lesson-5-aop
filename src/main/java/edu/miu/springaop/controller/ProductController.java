@@ -3,9 +3,8 @@ package edu.miu.springaop.controller;
 import edu.miu.springaop.aspect.annotation.ExecutionTime;
 import edu.miu.springaop.aspect.annotation.LogMe;
 import edu.miu.springaop.entity.Product;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lombok.extern.java.Log;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,9 +15,26 @@ public class ProductController {
     @ExecutionTime
     @LogMe
     @GetMapping
-    public List<Product> getAll(){
-
+    public List<Product> getAll() {
+       // System.out.println("method name : getAll");
+        System.out.println("method");
         return null;
+    }
+
+    public void test(){
+
+    }
+
+    @LogMe
+    @PostMapping
+    public void save() {
+      //  System.out.println("method name : save");
+    }
+
+    @LogMe
+    @DeleteMapping
+    public void delete() {
+       // System.out.println("method name : delete");
     }
 
 }
